@@ -68,7 +68,7 @@ n, p, k = 500, 1000, 5
 X, y, important_betas = _generate_dummy_classification_data(n=n, k=k)
 base_estimator = Pipeline([
     ('scaler', StandardScaler()),
-    ('model', LogisticRegression(penalty='l1'))
+    ('model', LogisticRegression(penalty='l1',solver="liblinear"))
 ])
 
 ## Here stability selection is instantiated and run
